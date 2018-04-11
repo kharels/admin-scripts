@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-#Modified by: kharel.shashank@gmai.com
+#Modified by: kharel.shashank@gmail.com
 use Socket;
 my $spacing = '32';
 my %config;
