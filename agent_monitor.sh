@@ -50,9 +50,9 @@ for SERVER in `cat /home/cascm/scripts/server_list`; do
 			echo "Agent offline on ${SERVER}, starting it now"
 			/home/cascm/scripts/ra_restart.sh -h ${SERVER}
 			if [ $? -eq 0 ]; then
-				echo ""
+				echo "Agent restarted successfully! :)"
 			else
-				echo ""
+				echo "Unable to restart agent! :("
 			fi
 		else 
 			echo "${SERVER} not found in DNS"
