@@ -1,0 +1,28 @@
+---
+- hosts: localhost
+  gather_facts: no
+  vars:
+    gh_username: kharels
+    gh_pass: "{{ pass }}"
+
+  tasks:
+  - name: list all repos
+    uri: 
+      user: "{{ gh_username }}"
+      password: "{{ gh_pass }}"
+      url: https://api.github.com/orgs/hmsholdings/repos
+      method: GET
+      force_basic_auth: yes
+    register: repo
+  - name: print output
+    debug: 
+    loop: "{{ repo | json_query('json[*].name') }} "
+
+  - name: list all groups
+    uri: 
+      user: "{{ gh_username }}"
+      password: "{{ gh_pass }}"
+      url: https://api.github.com/orgs/hmsholdings/teams
+      method: GET
+      force_basic_auth: yes
+
