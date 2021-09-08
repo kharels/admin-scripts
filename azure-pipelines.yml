@@ -16,6 +16,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
+    echo $(user.label0
     if [ -z $"(user.label)" ]; then
        echo "NULL"
     else
