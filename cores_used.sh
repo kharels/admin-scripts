@@ -1,5 +1,4 @@
 #!/bin/ksh
-# set -x
 
 # Setting some variables
 
