@@ -1,7 +1,5 @@
 #!/bin/bash
 #
-# Author: Shashank Kharel
-# Email: shashank.kharel@hms.com
 # Version: 0
 # Relase: 0.1
 #
